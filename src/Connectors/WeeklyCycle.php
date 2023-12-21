@@ -15,33 +15,33 @@
  * the License.
  */
 
-namespace Google\Service\Gmail;
+namespace Google\Service\Connectors;
 
-class ListLabelsResponse extends \Google\Collection
+class WeeklyCycle extends \Google\Collection
 {
-  protected $collection_key = 'labels';
+  protected $collection_key = 'schedule';
   /**
-   * @var Label[]
+   * @var Schedule[]
    */
-  public $labels;
-  protected $labelsType = Label::class;
-  protected $labelsDataType = 'array';
+  public $schedule;
+  protected $scheduleType = Schedule::class;
+  protected $scheduleDataType = 'array';
 
   /**
-   * @param Label[]
+   * @param Schedule[]
    */
-  public function setLabels($labels)
+  public function setSchedule($schedule)
   {
-    $this->labels = $labels;
+    $this->schedule = $schedule;
   }
   /**
-   * @return Label[]
+   * @return Schedule[]
    */
-  public function getLabels()
+  public function getSchedule()
   {
-    return $this->labels;
+    return $this->schedule;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListLabelsResponse::class, 'Google_Service_Gmail_ListLabelsResponse');
+class_alias(WeeklyCycle::class, 'Google_Service_Connectors_WeeklyCycle');

@@ -15,84 +15,66 @@
  * the License.
  */
 
-namespace Google\Service\CloudSupport;
+namespace Google\Service\SecurityCommandCenter;
 
-class Actor extends \Google\Model
+class SecurityBulletin extends \Google\Model
 {
   /**
    * @var string
    */
-  public $displayName;
+  public $bulletinId;
   /**
    * @var string
    */
-  public $email;
-  /**
-   * @var bool
-   */
-  public $googleSupport;
+  public $submissionTime;
   /**
    * @var string
    */
-  public $username;
+  public $suggestedUpgradeVersion;
 
   /**
    * @param string
    */
-  public function setDisplayName($displayName)
+  public function setBulletinId($bulletinId)
   {
-    $this->displayName = $displayName;
+    $this->bulletinId = $bulletinId;
   }
   /**
    * @return string
    */
-  public function getDisplayName()
+  public function getBulletinId()
   {
-    return $this->displayName;
+    return $this->bulletinId;
   }
   /**
    * @param string
    */
-  public function setEmail($email)
+  public function setSubmissionTime($submissionTime)
   {
-    $this->email = $email;
+    $this->submissionTime = $submissionTime;
   }
   /**
    * @return string
    */
-  public function getEmail()
+  public function getSubmissionTime()
   {
-    return $this->email;
-  }
-  /**
-   * @param bool
-   */
-  public function setGoogleSupport($googleSupport)
-  {
-    $this->googleSupport = $googleSupport;
-  }
-  /**
-   * @return bool
-   */
-  public function getGoogleSupport()
-  {
-    return $this->googleSupport;
+    return $this->submissionTime;
   }
   /**
    * @param string
    */
-  public function setUsername($username)
+  public function setSuggestedUpgradeVersion($suggestedUpgradeVersion)
   {
-    $this->username = $username;
+    $this->suggestedUpgradeVersion = $suggestedUpgradeVersion;
   }
   /**
    * @return string
    */
-  public function getUsername()
+  public function getSuggestedUpgradeVersion()
   {
-    return $this->username;
+    return $this->suggestedUpgradeVersion;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Actor::class, 'Google_Service_CloudSupport_Actor');
+class_alias(SecurityBulletin::class, 'Google_Service_SecurityCommandCenter_SecurityBulletin');

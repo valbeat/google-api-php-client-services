@@ -15,33 +15,31 @@
  * the License.
  */
 
-namespace Google\Service\Gmail;
+namespace Google\Service\Connectors;
 
-class ListLabelsResponse extends \Google\Collection
+class NotificationParameter extends \Google\Collection
 {
-  protected $collection_key = 'labels';
+  protected $collection_key = 'values';
   /**
-   * @var Label[]
+   * @var string[]
    */
-  public $labels;
-  protected $labelsType = Label::class;
-  protected $labelsDataType = 'array';
+  public $values;
 
   /**
-   * @param Label[]
+   * @param string[]
    */
-  public function setLabels($labels)
+  public function setValues($values)
   {
-    $this->labels = $labels;
+    $this->values = $values;
   }
   /**
-   * @return Label[]
+   * @return string[]
    */
-  public function getLabels()
+  public function getValues()
   {
-    return $this->labels;
+    return $this->values;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListLabelsResponse::class, 'Google_Service_Gmail_ListLabelsResponse');
+class_alias(NotificationParameter::class, 'Google_Service_Connectors_NotificationParameter');

@@ -15,33 +15,48 @@
  * the License.
  */
 
-namespace Google\Service\Gmail;
+namespace Google\Service\SecurityCommandCenter;
 
-class ListLabelsResponse extends \Google\Collection
+class DiskPath extends \Google\Model
 {
-  protected $collection_key = 'labels';
   /**
-   * @var Label[]
+   * @var string
    */
-  public $labels;
-  protected $labelsType = Label::class;
-  protected $labelsDataType = 'array';
+  public $partitionUuid;
+  /**
+   * @var string
+   */
+  public $relativePath;
 
   /**
-   * @param Label[]
+   * @param string
    */
-  public function setLabels($labels)
+  public function setPartitionUuid($partitionUuid)
   {
-    $this->labels = $labels;
+    $this->partitionUuid = $partitionUuid;
   }
   /**
-   * @return Label[]
+   * @return string
    */
-  public function getLabels()
+  public function getPartitionUuid()
   {
-    return $this->labels;
+    return $this->partitionUuid;
+  }
+  /**
+   * @param string
+   */
+  public function setRelativePath($relativePath)
+  {
+    $this->relativePath = $relativePath;
+  }
+  /**
+   * @return string
+   */
+  public function getRelativePath()
+  {
+    return $this->relativePath;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListLabelsResponse::class, 'Google_Service_Gmail_ListLabelsResponse');
+class_alias(DiskPath::class, 'Google_Service_SecurityCommandCenter_DiskPath');

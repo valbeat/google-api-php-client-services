@@ -15,33 +15,48 @@
  * the License.
  */
 
-namespace Google\Service\Gmail;
+namespace Google\Service\Connectors;
 
-class ListLabelsResponse extends \Google\Collection
+class ProvisionedResource extends \Google\Model
 {
-  protected $collection_key = 'labels';
   /**
-   * @var Label[]
+   * @var string
    */
-  public $labels;
-  protected $labelsType = Label::class;
-  protected $labelsDataType = 'array';
+  public $resourceType;
+  /**
+   * @var string
+   */
+  public $resourceUrl;
 
   /**
-   * @param Label[]
+   * @param string
    */
-  public function setLabels($labels)
+  public function setResourceType($resourceType)
   {
-    $this->labels = $labels;
+    $this->resourceType = $resourceType;
   }
   /**
-   * @return Label[]
+   * @return string
    */
-  public function getLabels()
+  public function getResourceType()
   {
-    return $this->labels;
+    return $this->resourceType;
+  }
+  /**
+   * @param string
+   */
+  public function setResourceUrl($resourceUrl)
+  {
+    $this->resourceUrl = $resourceUrl;
+  }
+  /**
+   * @return string
+   */
+  public function getResourceUrl()
+  {
+    return $this->resourceUrl;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListLabelsResponse::class, 'Google_Service_Gmail_ListLabelsResponse');
+class_alias(ProvisionedResource::class, 'Google_Service_Connectors_ProvisionedResource');

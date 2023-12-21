@@ -15,84 +15,84 @@
  * the License.
  */
 
-namespace Google\Service\CloudSupport;
+namespace Google\Service\SecurityCommandCenter;
 
-class Actor extends \Google\Model
+class Package extends \Google\Model
 {
   /**
    * @var string
    */
-  public $displayName;
+  public $cpeUri;
   /**
    * @var string
    */
-  public $email;
-  /**
-   * @var bool
-   */
-  public $googleSupport;
+  public $packageName;
   /**
    * @var string
    */
-  public $username;
+  public $packageType;
+  /**
+   * @var string
+   */
+  public $packageVersion;
 
   /**
    * @param string
    */
-  public function setDisplayName($displayName)
+  public function setCpeUri($cpeUri)
   {
-    $this->displayName = $displayName;
+    $this->cpeUri = $cpeUri;
   }
   /**
    * @return string
    */
-  public function getDisplayName()
+  public function getCpeUri()
   {
-    return $this->displayName;
+    return $this->cpeUri;
   }
   /**
    * @param string
    */
-  public function setEmail($email)
+  public function setPackageName($packageName)
   {
-    $this->email = $email;
+    $this->packageName = $packageName;
   }
   /**
    * @return string
    */
-  public function getEmail()
+  public function getPackageName()
   {
-    return $this->email;
-  }
-  /**
-   * @param bool
-   */
-  public function setGoogleSupport($googleSupport)
-  {
-    $this->googleSupport = $googleSupport;
-  }
-  /**
-   * @return bool
-   */
-  public function getGoogleSupport()
-  {
-    return $this->googleSupport;
+    return $this->packageName;
   }
   /**
    * @param string
    */
-  public function setUsername($username)
+  public function setPackageType($packageType)
   {
-    $this->username = $username;
+    $this->packageType = $packageType;
   }
   /**
    * @return string
    */
-  public function getUsername()
+  public function getPackageType()
   {
-    return $this->username;
+    return $this->packageType;
+  }
+  /**
+   * @param string
+   */
+  public function setPackageVersion($packageVersion)
+  {
+    $this->packageVersion = $packageVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getPackageVersion()
+  {
+    return $this->packageVersion;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Actor::class, 'Google_Service_CloudSupport_Actor');
+class_alias(Package::class, 'Google_Service_SecurityCommandCenter_Package');

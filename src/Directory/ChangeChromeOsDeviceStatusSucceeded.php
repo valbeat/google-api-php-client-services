@@ -15,33 +15,11 @@
  * the License.
  */
 
-namespace Google\Service\Gmail;
+namespace Google\Service\Directory;
 
-class ListLabelsResponse extends \Google\Collection
+class ChangeChromeOsDeviceStatusSucceeded extends \Google\Model
 {
-  protected $collection_key = 'labels';
-  /**
-   * @var Label[]
-   */
-  public $labels;
-  protected $labelsType = Label::class;
-  protected $labelsDataType = 'array';
-
-  /**
-   * @param Label[]
-   */
-  public function setLabels($labels)
-  {
-    $this->labels = $labels;
-  }
-  /**
-   * @return Label[]
-   */
-  public function getLabels()
-  {
-    return $this->labels;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListLabelsResponse::class, 'Google_Service_Gmail_ListLabelsResponse');
+class_alias(ChangeChromeOsDeviceStatusSucceeded::class, 'Google_Service_Directory_ChangeChromeOsDeviceStatusSucceeded');

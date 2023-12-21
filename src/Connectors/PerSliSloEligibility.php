@@ -15,33 +15,32 @@
  * the License.
  */
 
-namespace Google\Service\Gmail;
+namespace Google\Service\Connectors;
 
-class ListLabelsResponse extends \Google\Collection
+class PerSliSloEligibility extends \Google\Model
 {
-  protected $collection_key = 'labels';
   /**
-   * @var Label[]
+   * @var SloEligibility[]
    */
-  public $labels;
-  protected $labelsType = Label::class;
-  protected $labelsDataType = 'array';
+  public $eligibilities;
+  protected $eligibilitiesType = SloEligibility::class;
+  protected $eligibilitiesDataType = 'map';
 
   /**
-   * @param Label[]
+   * @param SloEligibility[]
    */
-  public function setLabels($labels)
+  public function setEligibilities($eligibilities)
   {
-    $this->labels = $labels;
+    $this->eligibilities = $eligibilities;
   }
   /**
-   * @return Label[]
+   * @return SloEligibility[]
    */
-  public function getLabels()
+  public function getEligibilities()
   {
-    return $this->labels;
+    return $this->eligibilities;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListLabelsResponse::class, 'Google_Service_Gmail_ListLabelsResponse');
+class_alias(PerSliSloEligibility::class, 'Google_Service_Connectors_PerSliSloEligibility');

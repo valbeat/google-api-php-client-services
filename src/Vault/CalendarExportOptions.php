@@ -15,33 +15,30 @@
  * the License.
  */
 
-namespace Google\Service\Gmail;
+namespace Google\Service\Vault;
 
-class ListLabelsResponse extends \Google\Collection
+class CalendarExportOptions extends \Google\Model
 {
-  protected $collection_key = 'labels';
   /**
-   * @var Label[]
+   * @var string
    */
-  public $labels;
-  protected $labelsType = Label::class;
-  protected $labelsDataType = 'array';
+  public $exportFormat;
 
   /**
-   * @param Label[]
+   * @param string
    */
-  public function setLabels($labels)
+  public function setExportFormat($exportFormat)
   {
-    $this->labels = $labels;
+    $this->exportFormat = $exportFormat;
   }
   /**
-   * @return Label[]
+   * @return string
    */
-  public function getLabels()
+  public function getExportFormat()
   {
-    return $this->labels;
+    return $this->exportFormat;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListLabelsResponse::class, 'Google_Service_Gmail_ListLabelsResponse');
+class_alias(CalendarExportOptions::class, 'Google_Service_Vault_CalendarExportOptions');

@@ -15,33 +15,50 @@
  * the License.
  */
 
-namespace Google\Service\Gmail;
+namespace Google\Service\Connectors;
 
-class ListLabelsResponse extends \Google\Collection
+class DailyCycle extends \Google\Model
 {
-  protected $collection_key = 'labels';
   /**
-   * @var Label[]
+   * @var string
    */
-  public $labels;
-  protected $labelsType = Label::class;
-  protected $labelsDataType = 'array';
+  public $duration;
+  /**
+   * @var TimeOfDay
+   */
+  public $startTime;
+  protected $startTimeType = TimeOfDay::class;
+  protected $startTimeDataType = '';
 
   /**
-   * @param Label[]
+   * @param string
    */
-  public function setLabels($labels)
+  public function setDuration($duration)
   {
-    $this->labels = $labels;
+    $this->duration = $duration;
   }
   /**
-   * @return Label[]
+   * @return string
    */
-  public function getLabels()
+  public function getDuration()
   {
-    return $this->labels;
+    return $this->duration;
+  }
+  /**
+   * @param TimeOfDay
+   */
+  public function setStartTime(TimeOfDay $startTime)
+  {
+    $this->startTime = $startTime;
+  }
+  /**
+   * @return TimeOfDay
+   */
+  public function getStartTime()
+  {
+    return $this->startTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListLabelsResponse::class, 'Google_Service_Gmail_ListLabelsResponse');
+class_alias(DailyCycle::class, 'Google_Service_Connectors_DailyCycle');

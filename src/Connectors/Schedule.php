@@ -15,84 +15,68 @@
  * the License.
  */
 
-namespace Google\Service\CloudSupport;
+namespace Google\Service\Connectors;
 
-class Actor extends \Google\Model
+class Schedule extends \Google\Model
 {
   /**
    * @var string
    */
-  public $displayName;
+  public $day;
   /**
    * @var string
    */
-  public $email;
+  public $duration;
   /**
-   * @var bool
+   * @var TimeOfDay
    */
-  public $googleSupport;
-  /**
-   * @var string
-   */
-  public $username;
+  public $startTime;
+  protected $startTimeType = TimeOfDay::class;
+  protected $startTimeDataType = '';
 
   /**
    * @param string
    */
-  public function setDisplayName($displayName)
+  public function setDay($day)
   {
-    $this->displayName = $displayName;
+    $this->day = $day;
   }
   /**
    * @return string
    */
-  public function getDisplayName()
+  public function getDay()
   {
-    return $this->displayName;
+    return $this->day;
   }
   /**
    * @param string
    */
-  public function setEmail($email)
+  public function setDuration($duration)
   {
-    $this->email = $email;
+    $this->duration = $duration;
   }
   /**
    * @return string
    */
-  public function getEmail()
+  public function getDuration()
   {
-    return $this->email;
+    return $this->duration;
   }
   /**
-   * @param bool
+   * @param TimeOfDay
    */
-  public function setGoogleSupport($googleSupport)
+  public function setStartTime(TimeOfDay $startTime)
   {
-    $this->googleSupport = $googleSupport;
+    $this->startTime = $startTime;
   }
   /**
-   * @return bool
+   * @return TimeOfDay
    */
-  public function getGoogleSupport()
+  public function getStartTime()
   {
-    return $this->googleSupport;
-  }
-  /**
-   * @param string
-   */
-  public function setUsername($username)
-  {
-    $this->username = $username;
-  }
-  /**
-   * @return string
-   */
-  public function getUsername()
-  {
-    return $this->username;
+    return $this->startTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Actor::class, 'Google_Service_CloudSupport_Actor');
+class_alias(Schedule::class, 'Google_Service_Connectors_Schedule');

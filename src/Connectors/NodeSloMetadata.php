@@ -15,84 +15,68 @@
  * the License.
  */
 
-namespace Google\Service\CloudSupport;
+namespace Google\Service\Connectors;
 
-class Actor extends \Google\Model
+class NodeSloMetadata extends \Google\Model
 {
   /**
    * @var string
    */
-  public $displayName;
+  public $location;
   /**
    * @var string
    */
-  public $email;
+  public $nodeId;
   /**
-   * @var bool
+   * @var PerSliSloEligibility
    */
-  public $googleSupport;
-  /**
-   * @var string
-   */
-  public $username;
+  public $perSliEligibility;
+  protected $perSliEligibilityType = PerSliSloEligibility::class;
+  protected $perSliEligibilityDataType = '';
 
   /**
    * @param string
    */
-  public function setDisplayName($displayName)
+  public function setLocation($location)
   {
-    $this->displayName = $displayName;
+    $this->location = $location;
   }
   /**
    * @return string
    */
-  public function getDisplayName()
+  public function getLocation()
   {
-    return $this->displayName;
+    return $this->location;
   }
   /**
    * @param string
    */
-  public function setEmail($email)
+  public function setNodeId($nodeId)
   {
-    $this->email = $email;
+    $this->nodeId = $nodeId;
   }
   /**
    * @return string
    */
-  public function getEmail()
+  public function getNodeId()
   {
-    return $this->email;
+    return $this->nodeId;
   }
   /**
-   * @param bool
+   * @param PerSliSloEligibility
    */
-  public function setGoogleSupport($googleSupport)
+  public function setPerSliEligibility(PerSliSloEligibility $perSliEligibility)
   {
-    $this->googleSupport = $googleSupport;
+    $this->perSliEligibility = $perSliEligibility;
   }
   /**
-   * @return bool
+   * @return PerSliSloEligibility
    */
-  public function getGoogleSupport()
+  public function getPerSliEligibility()
   {
-    return $this->googleSupport;
-  }
-  /**
-   * @param string
-   */
-  public function setUsername($username)
-  {
-    $this->username = $username;
-  }
-  /**
-   * @return string
-   */
-  public function getUsername()
-  {
-    return $this->username;
+    return $this->perSliEligibility;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Actor::class, 'Google_Service_CloudSupport_Actor');
+class_alias(NodeSloMetadata::class, 'Google_Service_Connectors_NodeSloMetadata');
