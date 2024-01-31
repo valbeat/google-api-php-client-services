@@ -99,8 +99,11 @@ class ForwardingRules extends \Google\Service\Resource
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
    * false.
-   * @opt_param string serviceProjectNumber
+   * @opt_param string serviceProjectNumber The Shared VPC service project id or
+   * service project number for which aggregated list request is invoked for
+   * subnetworks list-usable api.
    * @return ForwardingRuleAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -127,6 +130,7 @@ class ForwardingRules extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $region, $forwardingRule, $optParams = [])
   {
@@ -142,6 +146,7 @@ class ForwardingRules extends \Google\Service\Resource
    * @param string $forwardingRule Name of the ForwardingRule resource to return.
    * @param array $optParams Optional parameters.
    * @return ForwardingRule
+   * @throws \Google\Service\Exception
    */
   public function get($project, $region, $forwardingRule, $optParams = [])
   {
@@ -169,6 +174,7 @@ class ForwardingRules extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $region, ForwardingRule $postBody, $optParams = [])
   {
@@ -236,6 +242,7 @@ class ForwardingRules extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return ForwardingRuleList
+   * @throws \Google\Service\Exception
    */
   public function listForwardingRules($project, $region, $optParams = [])
   {
@@ -266,6 +273,7 @@ class ForwardingRules extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($project, $region, $forwardingRule, ForwardingRule $postBody, $optParams = [])
   {
@@ -294,6 +302,7 @@ class ForwardingRules extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setLabels($project, $region, $resource, RegionSetLabelsRequest $postBody, $optParams = [])
   {
@@ -323,6 +332,7 @@ class ForwardingRules extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setTarget($project, $region, $forwardingRule, TargetReference $postBody, $optParams = [])
   {

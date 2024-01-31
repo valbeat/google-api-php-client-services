@@ -98,8 +98,11 @@ class TargetHttpProxies extends \Google\Service\Resource
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
    * false.
-   * @opt_param string serviceProjectNumber
+   * @opt_param string serviceProjectNumber The Shared VPC service project id or
+   * service project number for which aggregated list request is invoked for
+   * subnetworks list-usable api.
    * @return TargetHttpProxyAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -126,6 +129,7 @@ class TargetHttpProxies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $targetHttpProxy, $optParams = [])
   {
@@ -141,6 +145,7 @@ class TargetHttpProxies extends \Google\Service\Resource
    * return.
    * @param array $optParams Optional parameters.
    * @return TargetHttpProxy
+   * @throws \Google\Service\Exception
    */
   public function get($project, $targetHttpProxy, $optParams = [])
   {
@@ -167,6 +172,7 @@ class TargetHttpProxies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, TargetHttpProxy $postBody, $optParams = [])
   {
@@ -233,6 +239,7 @@ class TargetHttpProxies extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return TargetHttpProxyList
+   * @throws \Google\Service\Exception
    */
   public function listTargetHttpProxies($project, $optParams = [])
   {
@@ -261,6 +268,7 @@ class TargetHttpProxies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($project, $targetHttpProxy, TargetHttpProxy $postBody, $optParams = [])
   {
@@ -288,6 +296,7 @@ class TargetHttpProxies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setUrlMap($project, $targetHttpProxy, UrlMapReference $postBody, $optParams = [])
   {

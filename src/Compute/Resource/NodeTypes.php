@@ -95,8 +95,11 @@ class NodeTypes extends \Google\Service\Resource
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
    * false.
-   * @opt_param string serviceProjectNumber
+   * @opt_param string serviceProjectNumber The Shared VPC service project id or
+   * service project number for which aggregated list request is invoked for
+   * subnetworks list-usable api.
    * @return NodeTypeAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -112,6 +115,7 @@ class NodeTypes extends \Google\Service\Resource
    * @param string $nodeType Name of the node type to return.
    * @param array $optParams Optional parameters.
    * @return NodeType
+   * @throws \Google\Service\Exception
    */
   public function get($project, $zone, $nodeType, $optParams = [])
   {
@@ -179,6 +183,7 @@ class NodeTypes extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return NodeTypeList
+   * @throws \Google\Service\Exception
    */
   public function listNodeTypes($project, $zone, $optParams = [])
   {

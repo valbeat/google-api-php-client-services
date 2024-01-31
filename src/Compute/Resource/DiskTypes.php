@@ -95,8 +95,11 @@ class DiskTypes extends \Google\Service\Resource
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
    * false.
-   * @opt_param string serviceProjectNumber
+   * @opt_param string serviceProjectNumber The Shared VPC service project id or
+   * service project number for which aggregated list request is invoked for
+   * subnetworks list-usable api.
    * @return DiskTypeAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -112,6 +115,7 @@ class DiskTypes extends \Google\Service\Resource
    * @param string $diskType Name of the disk type to return.
    * @param array $optParams Optional parameters.
    * @return DiskType
+   * @throws \Google\Service\Exception
    */
   public function get($project, $zone, $diskType, $optParams = [])
   {
@@ -179,6 +183,7 @@ class DiskTypes extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return DiskTypeList
+   * @throws \Google\Service\Exception
    */
   public function listDiskTypes($project, $zone, $optParams = [])
   {

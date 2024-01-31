@@ -100,8 +100,11 @@ class VpnGateways extends \Google\Service\Resource
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
    * false.
-   * @opt_param string serviceProjectNumber
+   * @opt_param string serviceProjectNumber The Shared VPC service project id or
+   * service project number for which aggregated list request is invoked for
+   * subnetworks list-usable api.
    * @return VpnGatewayAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -128,6 +131,7 @@ class VpnGateways extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $region, $vpnGateway, $optParams = [])
   {
@@ -143,6 +147,7 @@ class VpnGateways extends \Google\Service\Resource
    * @param string $vpnGateway Name of the VPN gateway to return.
    * @param array $optParams Optional parameters.
    * @return VpnGateway
+   * @throws \Google\Service\Exception
    */
   public function get($project, $region, $vpnGateway, $optParams = [])
   {
@@ -158,6 +163,7 @@ class VpnGateways extends \Google\Service\Resource
    * @param string $vpnGateway Name of the VPN gateway to return.
    * @param array $optParams Optional parameters.
    * @return VpnGatewaysGetStatusResponse
+   * @throws \Google\Service\Exception
    */
   public function getStatus($project, $region, $vpnGateway, $optParams = [])
   {
@@ -185,6 +191,7 @@ class VpnGateways extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $region, VpnGateway $postBody, $optParams = [])
   {
@@ -252,6 +259,7 @@ class VpnGateways extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return VpnGatewayList
+   * @throws \Google\Service\Exception
    */
   public function listVpnGateways($project, $region, $optParams = [])
   {
@@ -280,6 +288,7 @@ class VpnGateways extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setLabels($project, $region, $resource, RegionSetLabelsRequest $postBody, $optParams = [])
   {
@@ -297,6 +306,7 @@ class VpnGateways extends \Google\Service\Resource
    * @param TestPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($project, $region, $resource, TestPermissionsRequest $postBody, $optParams = [])
   {

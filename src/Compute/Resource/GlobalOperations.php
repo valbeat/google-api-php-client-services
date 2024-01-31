@@ -96,8 +96,11 @@ class GlobalOperations extends \Google\Service\Resource
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
    * false.
-   * @opt_param string serviceProjectNumber
+   * @opt_param string serviceProjectNumber The Shared VPC service project id or
+   * service project number for which aggregated list request is invoked for
+   * subnetworks list-usable api.
    * @return OperationAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -111,6 +114,7 @@ class GlobalOperations extends \Google\Service\Resource
    * @param string $project Project ID for this request.
    * @param string $operation Name of the Operations resource to delete.
    * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $operation, $optParams = [])
   {
@@ -125,6 +129,7 @@ class GlobalOperations extends \Google\Service\Resource
    * @param string $operation Name of the Operations resource to return.
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function get($project, $operation, $optParams = [])
   {
@@ -191,6 +196,7 @@ class GlobalOperations extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return OperationList
+   * @throws \Google\Service\Exception
    */
   public function listGlobalOperations($project, $optParams = [])
   {
@@ -215,6 +221,7 @@ class GlobalOperations extends \Google\Service\Resource
    * @param string $operation Name of the Operations resource to return.
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function wait($project, $operation, $optParams = [])
   {

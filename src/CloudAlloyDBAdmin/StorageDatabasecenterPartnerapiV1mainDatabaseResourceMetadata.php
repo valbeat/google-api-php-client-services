@@ -19,22 +19,10 @@ namespace Google\Service\CloudAlloyDBAdmin;
 
 class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Google\Model
 {
-  /**
-   * @var StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration
-   */
-  public $availabilityConfiguration;
   protected $availabilityConfigurationType = StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration::class;
   protected $availabilityConfigurationDataType = '';
-  /**
-   * @var StorageDatabasecenterPartnerapiV1mainBackupConfiguration
-   */
-  public $backupConfiguration;
   protected $backupConfigurationType = StorageDatabasecenterPartnerapiV1mainBackupConfiguration::class;
   protected $backupConfigurationDataType = '';
-  /**
-   * @var StorageDatabasecenterPartnerapiV1mainBackupRun
-   */
-  public $backupRun;
   protected $backupRunType = StorageDatabasecenterPartnerapiV1mainBackupRun::class;
   protected $backupRunDataType = '';
   /**
@@ -45,18 +33,12 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
    * @var string
    */
   public $currentState;
-  /**
-   * @var array[]
-   */
-  public $customMetadata;
+  protected $customMetadataType = StorageDatabasecenterPartnerapiV1mainCustomMetadataData::class;
+  protected $customMetadataDataType = '';
   /**
    * @var string
    */
   public $expectedState;
-  /**
-   * @var StorageDatabasecenterPartnerapiV1mainDatabaseResourceId
-   */
-  public $id;
   protected $idType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceId::class;
   protected $idDataType = '';
   /**
@@ -67,16 +49,8 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
    * @var string
    */
   public $location;
-  /**
-   * @var StorageDatabasecenterPartnerapiV1mainDatabaseResourceId
-   */
-  public $primaryResourceId;
   protected $primaryResourceIdType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceId::class;
   protected $primaryResourceIdDataType = '';
-  /**
-   * @var StorageDatabasecenterProtoCommonProduct
-   */
-  public $product;
   protected $productType = StorageDatabasecenterProtoCommonProduct::class;
   protected $productDataType = '';
   /**
@@ -167,14 +141,14 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->currentState;
   }
   /**
-   * @param array[]
+   * @param StorageDatabasecenterPartnerapiV1mainCustomMetadataData
    */
-  public function setCustomMetadata($customMetadata)
+  public function setCustomMetadata(StorageDatabasecenterPartnerapiV1mainCustomMetadataData $customMetadata)
   {
     $this->customMetadata = $customMetadata;
   }
   /**
-   * @return array[]
+   * @return StorageDatabasecenterPartnerapiV1mainCustomMetadataData
    */
   public function getCustomMetadata()
   {

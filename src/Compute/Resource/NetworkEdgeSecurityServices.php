@@ -96,8 +96,11 @@ class NetworkEdgeSecurityServices extends \Google\Service\Resource
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
    * false.
-   * @opt_param string serviceProjectNumber
+   * @opt_param string serviceProjectNumber The Shared VPC service project id or
+   * service project number for which aggregated list request is invoked for
+   * subnetworks list-usable api.
    * @return NetworkEdgeSecurityServiceAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -125,6 +128,7 @@ class NetworkEdgeSecurityServices extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $region, $networkEdgeSecurityService, $optParams = [])
   {
@@ -142,6 +146,7 @@ class NetworkEdgeSecurityServices extends \Google\Service\Resource
    * service to get.
    * @param array $optParams Optional parameters.
    * @return NetworkEdgeSecurityService
+   * @throws \Google\Service\Exception
    */
   public function get($project, $region, $networkEdgeSecurityService, $optParams = [])
   {
@@ -170,6 +175,7 @@ class NetworkEdgeSecurityServices extends \Google\Service\Resource
    * 00000000-0000-0000-0000-000000000000).
    * @opt_param bool validateOnly If true, the request will not be committed.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $region, NetworkEdgeSecurityService $postBody, $optParams = [])
   {
@@ -202,6 +208,7 @@ class NetworkEdgeSecurityServices extends \Google\Service\Resource
    * @opt_param string updateMask Indicates fields to be updated as part of this
    * request.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($project, $region, $networkEdgeSecurityService, NetworkEdgeSecurityService $postBody, $optParams = [])
   {

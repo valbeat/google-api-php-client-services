@@ -103,8 +103,11 @@ class NetworkEndpointGroups extends \Google\Service\Resource
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
    * false.
-   * @opt_param string serviceProjectNumber
+   * @opt_param string serviceProjectNumber The Shared VPC service project id or
+   * service project number for which aggregated list request is invoked for
+   * subnetworks list-usable api.
    * @return NetworkEndpointGroupAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -135,6 +138,7 @@ class NetworkEndpointGroups extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function attachNetworkEndpoints($project, $zone, $networkEndpointGroup, NetworkEndpointGroupsAttachEndpointsRequest $postBody, $optParams = [])
   {
@@ -166,6 +170,7 @@ class NetworkEndpointGroups extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $zone, $networkEndpointGroup, $optParams = [])
   {
@@ -196,6 +201,7 @@ class NetworkEndpointGroups extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function detachNetworkEndpoints($project, $zone, $networkEndpointGroup, NetworkEndpointGroupsDetachEndpointsRequest $postBody, $optParams = [])
   {
@@ -213,6 +219,7 @@ class NetworkEndpointGroups extends \Google\Service\Resource
    * It should comply with RFC1035.
    * @param array $optParams Optional parameters.
    * @return NetworkEndpointGroup
+   * @throws \Google\Service\Exception
    */
   public function get($project, $zone, $networkEndpointGroup, $optParams = [])
   {
@@ -241,6 +248,7 @@ class NetworkEndpointGroups extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $zone, NetworkEndpointGroup $postBody, $optParams = [])
   {
@@ -309,6 +317,7 @@ class NetworkEndpointGroups extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return NetworkEndpointGroupList
+   * @throws \Google\Service\Exception
    */
   public function listNetworkEndpointGroups($project, $zone, $optParams = [])
   {
@@ -381,6 +390,7 @@ class NetworkEndpointGroups extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return NetworkEndpointGroupsListNetworkEndpoints
+   * @throws \Google\Service\Exception
    */
   public function listNetworkEndpoints($project, $zone, $networkEndpointGroup, NetworkEndpointGroupsListEndpointsRequest $postBody, $optParams = [])
   {
@@ -398,6 +408,7 @@ class NetworkEndpointGroups extends \Google\Service\Resource
    * @param TestPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($project, $zone, $resource, TestPermissionsRequest $postBody, $optParams = [])
   {

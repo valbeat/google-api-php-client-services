@@ -97,8 +97,11 @@ class RegionCommitments extends \Google\Service\Resource
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
    * false.
-   * @opt_param string serviceProjectNumber
+   * @opt_param string serviceProjectNumber The Shared VPC service project id or
+   * service project number for which aggregated list request is invoked for
+   * subnetworks list-usable api.
    * @return CommitmentAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -114,6 +117,7 @@ class RegionCommitments extends \Google\Service\Resource
    * @param string $commitment Name of the commitment to return.
    * @param array $optParams Optional parameters.
    * @return Commitment
+   * @throws \Google\Service\Exception
    */
   public function get($project, $region, $commitment, $optParams = [])
   {
@@ -141,6 +145,7 @@ class RegionCommitments extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $region, Commitment $postBody, $optParams = [])
   {
@@ -208,6 +213,7 @@ class RegionCommitments extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return CommitmentList
+   * @throws \Google\Service\Exception
    */
   public function listRegionCommitments($project, $region, $optParams = [])
   {
@@ -242,6 +248,7 @@ class RegionCommitments extends \Google\Service\Resource
    * @opt_param string updateMask update_mask indicates fields to be updated as
    * part of this request.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function update($project, $region, $commitment, Commitment $postBody, $optParams = [])
   {

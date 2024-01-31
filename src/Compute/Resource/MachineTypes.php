@@ -95,8 +95,11 @@ class MachineTypes extends \Google\Service\Resource
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
    * false.
-   * @opt_param string serviceProjectNumber
+   * @opt_param string serviceProjectNumber The Shared VPC service project id or
+   * service project number for which aggregated list request is invoked for
+   * subnetworks list-usable api.
    * @return MachineTypeAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -112,6 +115,7 @@ class MachineTypes extends \Google\Service\Resource
    * @param string $machineType Name of the machine type to return.
    * @param array $optParams Optional parameters.
    * @return MachineType
+   * @throws \Google\Service\Exception
    */
   public function get($project, $zone, $machineType, $optParams = [])
   {
@@ -179,6 +183,7 @@ class MachineTypes extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return MachineTypeList
+   * @throws \Google\Service\Exception
    */
   public function listMachineTypes($project, $zone, $optParams = [])
   {

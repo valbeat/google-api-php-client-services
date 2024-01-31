@@ -77,6 +77,7 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function abandonInstances($project, $zone, $instanceGroupManager, InstanceGroupManagersAbandonInstancesRequest $postBody, $optParams = [])
   {
@@ -149,8 +150,11 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
    * false.
-   * @opt_param string serviceProjectNumber
+   * @opt_param string serviceProjectNumber The Shared VPC service project id or
+   * service project number for which aggregated list request is invoked for
+   * subnetworks list-usable api.
    * @return InstanceGroupManagerAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -171,6 +175,7 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * @param InstanceGroupManagersApplyUpdatesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function applyUpdatesToInstances($project, $zone, $instanceGroupManager, InstanceGroupManagersApplyUpdatesRequest $postBody, $optParams = [])
   {
@@ -204,6 +209,7 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function createInstances($project, $zone, $instanceGroupManager, InstanceGroupManagersCreateInstancesRequest $postBody, $optParams = [])
   {
@@ -235,6 +241,7 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $zone, $instanceGroupManager, $optParams = [])
   {
@@ -273,6 +280,7 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function deleteInstances($project, $zone, $instanceGroupManager, InstanceGroupManagersDeleteInstancesRequest $postBody, $optParams = [])
   {
@@ -292,6 +300,7 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * @param InstanceGroupManagersDeletePerInstanceConfigsReq $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function deletePerInstanceConfigs($project, $zone, $instanceGroupManager, InstanceGroupManagersDeletePerInstanceConfigsReq $postBody, $optParams = [])
   {
@@ -309,6 +318,7 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * @param string $instanceGroupManager The name of the managed instance group.
    * @param array $optParams Optional parameters.
    * @return InstanceGroupManager
+   * @throws \Google\Service\Exception
    */
   public function get($project, $zone, $instanceGroupManager, $optParams = [])
   {
@@ -343,6 +353,7 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $zone, InstanceGroupManager $postBody, $optParams = [])
   {
@@ -411,6 +422,7 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return InstanceGroupManagerList
+   * @throws \Google\Service\Exception
    */
   public function listInstanceGroupManagers($project, $zone, $optParams = [])
   {
@@ -484,6 +496,7 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return InstanceGroupManagersListErrorsResponse
+   * @throws \Google\Service\Exception
    */
   public function listErrors($project, $zone, $instanceGroupManager, $optParams = [])
   {
@@ -559,6 +572,7 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return InstanceGroupManagersListManagedInstancesResponse
+   * @throws \Google\Service\Exception
    */
   public function listManagedInstances($project, $zone, $instanceGroupManager, $optParams = [])
   {
@@ -630,6 +644,7 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return InstanceGroupManagersListPerInstanceConfigsResp
+   * @throws \Google\Service\Exception
    */
   public function listPerInstanceConfigs($project, $zone, $instanceGroupManager, $optParams = [])
   {
@@ -667,6 +682,7 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($project, $zone, $instanceGroupManager, InstanceGroupManager $postBody, $optParams = [])
   {
@@ -698,6 +714,7 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patchPerInstanceConfigs($project, $zone, $instanceGroupManager, InstanceGroupManagersPatchPerInstanceConfigsReq $postBody, $optParams = [])
   {
@@ -736,6 +753,7 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function recreateInstances($project, $zone, $instanceGroupManager, InstanceGroupManagersRecreateInstancesRequest $postBody, $optParams = [])
   {
@@ -781,6 +799,7 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function resize($project, $zone, $instanceGroupManager, $size, $optParams = [])
   {
@@ -812,6 +831,7 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setInstanceTemplate($project, $zone, $instanceGroupManager, InstanceGroupManagersSetInstanceTemplateRequest $postBody, $optParams = [])
   {
@@ -846,6 +866,7 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setTargetPools($project, $zone, $instanceGroupManager, InstanceGroupManagersSetTargetPoolsRequest $postBody, $optParams = [])
   {
@@ -877,6 +898,7 @@ class InstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function updatePerInstanceConfigs($project, $zone, $instanceGroupManager, InstanceGroupManagersUpdatePerInstanceConfigsReq $postBody, $optParams = [])
   {

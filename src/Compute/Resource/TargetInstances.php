@@ -98,8 +98,11 @@ class TargetInstances extends \Google\Service\Resource
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
    * false.
-   * @opt_param string serviceProjectNumber
+   * @opt_param string serviceProjectNumber The Shared VPC service project id or
+   * service project number for which aggregated list request is invoked for
+   * subnetworks list-usable api.
    * @return TargetInstanceAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -126,6 +129,7 @@ class TargetInstances extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $zone, $targetInstance, $optParams = [])
   {
@@ -141,6 +145,7 @@ class TargetInstances extends \Google\Service\Resource
    * @param string $targetInstance Name of the TargetInstance resource to return.
    * @param array $optParams Optional parameters.
    * @return TargetInstance
+   * @throws \Google\Service\Exception
    */
   public function get($project, $zone, $targetInstance, $optParams = [])
   {
@@ -168,6 +173,7 @@ class TargetInstances extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $zone, TargetInstance $postBody, $optParams = [])
   {
@@ -235,6 +241,7 @@ class TargetInstances extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return TargetInstanceList
+   * @throws \Google\Service\Exception
    */
   public function listTargetInstances($project, $zone, $optParams = [])
   {
@@ -265,6 +272,7 @@ class TargetInstances extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setSecurityPolicy($project, $zone, $targetInstance, SecurityPolicyReference $postBody, $optParams = [])
   {

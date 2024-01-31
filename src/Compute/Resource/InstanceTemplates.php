@@ -101,8 +101,11 @@ class InstanceTemplates extends \Google\Service\Resource
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
    * false.
-   * @opt_param string serviceProjectNumber
+   * @opt_param string serviceProjectNumber The Shared VPC service project id or
+   * service project number for which aggregated list request is invoked for
+   * subnetworks list-usable api.
    * @return InstanceTemplateAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -130,6 +133,7 @@ class InstanceTemplates extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $instanceTemplate, $optParams = [])
   {
@@ -144,6 +148,7 @@ class InstanceTemplates extends \Google\Service\Resource
    * @param string $instanceTemplate The name of the instance template.
    * @param array $optParams Optional parameters.
    * @return InstanceTemplate
+   * @throws \Google\Service\Exception
    */
   public function get($project, $instanceTemplate, $optParams = [])
   {
@@ -161,6 +166,7 @@ class InstanceTemplates extends \Google\Service\Resource
    *
    * @opt_param int optionsRequestedPolicyVersion Requested IAM Policy version.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($project, $resource, $optParams = [])
   {
@@ -190,6 +196,7 @@ class InstanceTemplates extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, InstanceTemplate $postBody, $optParams = [])
   {
@@ -256,6 +263,7 @@ class InstanceTemplates extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return InstanceTemplateList
+   * @throws \Google\Service\Exception
    */
   public function listInstanceTemplates($project, $optParams = [])
   {
@@ -272,6 +280,7 @@ class InstanceTemplates extends \Google\Service\Resource
    * @param GlobalSetPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($project, $resource, GlobalSetPolicyRequest $postBody, $optParams = [])
   {
@@ -288,6 +297,7 @@ class InstanceTemplates extends \Google\Service\Resource
    * @param TestPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($project, $resource, TestPermissionsRequest $postBody, $optParams = [])
   {

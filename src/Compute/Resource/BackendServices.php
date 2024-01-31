@@ -62,6 +62,7 @@ class BackendServices extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function addSignedUrlKey($project, $backendService, SignedUrlKey $postBody, $optParams = [])
   {
@@ -134,8 +135,11 @@ class BackendServices extends \Google\Service\Resource
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
    * false.
-   * @opt_param string serviceProjectNumber
+   * @opt_param string serviceProjectNumber The Shared VPC service project id or
+   * service project number for which aggregated list request is invoked for
+   * subnetworks list-usable api.
    * @return BackendServiceAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -161,6 +165,7 @@ class BackendServices extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $backendService, $optParams = [])
   {
@@ -189,6 +194,7 @@ class BackendServices extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function deleteSignedUrlKey($project, $backendService, $keyName, $optParams = [])
   {
@@ -203,6 +209,7 @@ class BackendServices extends \Google\Service\Resource
    * @param string $backendService Name of the BackendService resource to return.
    * @param array $optParams Optional parameters.
    * @return BackendService
+   * @throws \Google\Service\Exception
    */
   public function get($project, $backendService, $optParams = [])
   {
@@ -221,6 +228,7 @@ class BackendServices extends \Google\Service\Resource
    * @param ResourceGroupReference $postBody
    * @param array $optParams Optional parameters.
    * @return BackendServiceGroupHealth
+   * @throws \Google\Service\Exception
    */
   public function getHealth($project, $backendService, ResourceGroupReference $postBody, $optParams = [])
   {
@@ -238,6 +246,7 @@ class BackendServices extends \Google\Service\Resource
    *
    * @opt_param int optionsRequestedPolicyVersion Requested IAM Policy version.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($project, $resource, $optParams = [])
   {
@@ -265,6 +274,7 @@ class BackendServices extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, BackendService $postBody, $optParams = [])
   {
@@ -331,6 +341,7 @@ class BackendServices extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return BackendServiceList
+   * @throws \Google\Service\Exception
    */
   public function listBackendServices($project, $optParams = [])
   {
@@ -397,6 +408,7 @@ class BackendServices extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return BackendServiceListUsable
+   * @throws \Google\Service\Exception
    */
   public function listUsable($project, $optParams = [])
   {
@@ -426,6 +438,7 @@ class BackendServices extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($project, $backendService, BackendService $postBody, $optParams = [])
   {
@@ -454,6 +467,7 @@ class BackendServices extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setEdgeSecurityPolicy($project, $backendService, SecurityPolicyReference $postBody, $optParams = [])
   {
@@ -470,6 +484,7 @@ class BackendServices extends \Google\Service\Resource
    * @param GlobalSetPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($project, $resource, GlobalSetPolicyRequest $postBody, $optParams = [])
   {
@@ -499,6 +514,7 @@ class BackendServices extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setSecurityPolicy($project, $backendService, SecurityPolicyReference $postBody, $optParams = [])
   {
@@ -515,6 +531,7 @@ class BackendServices extends \Google\Service\Resource
    * @param TestPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($project, $resource, TestPermissionsRequest $postBody, $optParams = [])
   {
@@ -543,6 +560,7 @@ class BackendServices extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function update($project, $backendService, BackendService $postBody, $optParams = [])
   {

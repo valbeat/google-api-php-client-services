@@ -60,6 +60,7 @@ class TargetPools extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function addHealthCheck($project, $region, $targetPool, TargetPoolsAddHealthCheckRequest $postBody, $optParams = [])
   {
@@ -88,6 +89,7 @@ class TargetPools extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function addInstance($project, $region, $targetPool, TargetPoolsAddInstanceRequest $postBody, $optParams = [])
   {
@@ -159,8 +161,11 @@ class TargetPools extends \Google\Service\Resource
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
    * false.
-   * @opt_param string serviceProjectNumber
+   * @opt_param string serviceProjectNumber The Shared VPC service project id or
+   * service project number for which aggregated list request is invoked for
+   * subnetworks list-usable api.
    * @return TargetPoolAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -187,6 +192,7 @@ class TargetPools extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $region, $targetPool, $optParams = [])
   {
@@ -202,6 +208,7 @@ class TargetPools extends \Google\Service\Resource
    * @param string $targetPool Name of the TargetPool resource to return.
    * @param array $optParams Optional parameters.
    * @return TargetPool
+   * @throws \Google\Service\Exception
    */
   public function get($project, $region, $targetPool, $optParams = [])
   {
@@ -220,6 +227,7 @@ class TargetPools extends \Google\Service\Resource
    * @param InstanceReference $postBody
    * @param array $optParams Optional parameters.
    * @return TargetPoolInstanceHealth
+   * @throws \Google\Service\Exception
    */
   public function getHealth($project, $region, $targetPool, InstanceReference $postBody, $optParams = [])
   {
@@ -247,6 +255,7 @@ class TargetPools extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $region, TargetPool $postBody, $optParams = [])
   {
@@ -314,6 +323,7 @@ class TargetPools extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return TargetPoolList
+   * @throws \Google\Service\Exception
    */
   public function listTargetPools($project, $region, $optParams = [])
   {
@@ -342,6 +352,7 @@ class TargetPools extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function removeHealthCheck($project, $region, $targetPool, TargetPoolsRemoveHealthCheckRequest $postBody, $optParams = [])
   {
@@ -370,6 +381,7 @@ class TargetPools extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function removeInstance($project, $region, $targetPool, TargetPoolsRemoveInstanceRequest $postBody, $optParams = [])
   {
@@ -399,6 +411,7 @@ class TargetPools extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setBackup($project, $region, $targetPool, TargetReference $postBody, $optParams = [])
   {
@@ -429,6 +442,7 @@ class TargetPools extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setSecurityPolicy($project, $region, $targetPool, SecurityPolicyReference $postBody, $optParams = [])
   {

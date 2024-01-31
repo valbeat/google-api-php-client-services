@@ -23,28 +23,16 @@ class RunQueryRequest extends \Google\Model
    * @var string
    */
   public $databaseId;
-  /**
-   * @var GqlQuery
-   */
-  public $gqlQuery;
   protected $gqlQueryType = GqlQuery::class;
   protected $gqlQueryDataType = '';
   /**
-   * @var PartitionId
+   * @var string
    */
-  public $partitionId;
+  public $mode;
   protected $partitionIdType = PartitionId::class;
   protected $partitionIdDataType = '';
-  /**
-   * @var Query
-   */
-  public $query;
   protected $queryType = Query::class;
   protected $queryDataType = '';
-  /**
-   * @var ReadOptions
-   */
-  public $readOptions;
   protected $readOptionsType = ReadOptions::class;
   protected $readOptionsDataType = '';
 
@@ -75,6 +63,20 @@ class RunQueryRequest extends \Google\Model
   public function getGqlQuery()
   {
     return $this->gqlQuery;
+  }
+  /**
+   * @param string
+   */
+  public function setMode($mode)
+  {
+    $this->mode = $mode;
+  }
+  /**
+   * @return string
+   */
+  public function getMode()
+  {
+    return $this->mode;
   }
   /**
    * @param PartitionId

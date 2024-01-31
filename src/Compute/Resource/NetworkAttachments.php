@@ -101,8 +101,11 @@ class NetworkAttachments extends \Google\Service\Resource
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
    * false.
-   * @opt_param string serviceProjectNumber
+   * @opt_param string serviceProjectNumber The Shared VPC service project id or
+   * service project number for which aggregated list request is invoked for
+   * subnetworks list-usable api.
    * @return NetworkAttachmentAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -132,6 +135,7 @@ class NetworkAttachments extends \Google\Service\Resource
    * 00000000-0000-0000-0000-000000000000). end_interface:
    * MixerMutationRequestBuilder
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $region, $networkAttachment, $optParams = [])
   {
@@ -149,6 +153,7 @@ class NetworkAttachments extends \Google\Service\Resource
    * return.
    * @param array $optParams Optional parameters.
    * @return NetworkAttachment
+   * @throws \Google\Service\Exception
    */
   public function get($project, $region, $networkAttachment, $optParams = [])
   {
@@ -167,6 +172,7 @@ class NetworkAttachments extends \Google\Service\Resource
    *
    * @opt_param int optionsRequestedPolicyVersion Requested IAM Policy version.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($project, $region, $resource, $optParams = [])
   {
@@ -195,6 +201,7 @@ class NetworkAttachments extends \Google\Service\Resource
    * 00000000-0000-0000-0000-000000000000). end_interface:
    * MixerMutationRequestBuilder
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $region, NetworkAttachment $postBody, $optParams = [])
   {
@@ -262,6 +269,7 @@ class NetworkAttachments extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return NetworkAttachmentList
+   * @throws \Google\Service\Exception
    */
   public function listNetworkAttachments($project, $region, $optParams = [])
   {
@@ -293,6 +301,7 @@ class NetworkAttachments extends \Google\Service\Resource
    * 00000000-0000-0000-0000-000000000000). end_interface:
    * MixerMutationRequestBuilder
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($project, $region, $networkAttachment, NetworkAttachment $postBody, $optParams = [])
   {
@@ -310,6 +319,7 @@ class NetworkAttachments extends \Google\Service\Resource
    * @param RegionSetPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($project, $region, $resource, RegionSetPolicyRequest $postBody, $optParams = [])
   {
@@ -327,6 +337,7 @@ class NetworkAttachments extends \Google\Service\Resource
    * @param TestPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($project, $region, $resource, TestPermissionsRequest $postBody, $optParams = [])
   {
