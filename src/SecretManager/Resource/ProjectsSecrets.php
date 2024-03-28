@@ -42,7 +42,8 @@ class ProjectsSecrets extends \Google\Service\Resource
    * existing Secret. (secrets.addVersion)
    *
    * @param string $parent Required. The resource name of the Secret to associate
-   * with the SecretVersion in the format `projects/secrets`.
+   * with the SecretVersion in the format `projects/secrets` or
+   * `projects/locations/secrets`.
    * @param AddSecretVersionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SecretVersion
@@ -58,7 +59,7 @@ class ProjectsSecrets extends \Google\Service\Resource
    * Creates a new Secret containing no SecretVersions. (secrets.create)
    *
    * @param string $parent Required. The resource name of the project to associate
-   * with the Secret, in the format `projects`.
+   * with the Secret, in the format `projects` or `projects/locations`.
    * @param Secret $postBody
    * @param array $optParams Optional parameters.
    *
@@ -98,7 +99,7 @@ class ProjectsSecrets extends \Google\Service\Resource
    * Gets metadata for a given Secret. (secrets.get)
    *
    * @param string $name Required. The resource name of the Secret, in the format
-   * `projects/secrets`.
+   * `projects/secrets` or `projects/locations/secrets`.
    * @param array $optParams Optional parameters.
    * @return Secret
    * @throws \Google\Service\Exception
@@ -144,7 +145,7 @@ class ProjectsSecrets extends \Google\Service\Resource
    * Lists Secrets. (secrets.listProjectsSecrets)
    *
    * @param string $parent Required. The resource name of the project associated
-   * with the Secrets, in the format `projects`.
+   * with the Secrets, in the format `projects` or `projects/locations`
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Filter string, adhering to the rules in

@@ -80,6 +80,8 @@ class Dataset extends \Google\Collection
    * @var string
    */
   public $lastModifiedTime;
+  protected $linkedDatasetMetadataType = LinkedDatasetMetadata::class;
+  protected $linkedDatasetMetadataDataType = '';
   protected $linkedDatasetSourceType = LinkedDatasetSource::class;
   protected $linkedDatasetSourceDataType = '';
   /**
@@ -90,6 +92,10 @@ class Dataset extends \Google\Collection
    * @var string
    */
   public $maxTimeTravelHours;
+  /**
+   * @var bool
+   */
+  public $satisfiesPzi;
   /**
    * @var bool
    */
@@ -348,6 +354,20 @@ class Dataset extends \Google\Collection
     return $this->lastModifiedTime;
   }
   /**
+   * @param LinkedDatasetMetadata
+   */
+  public function setLinkedDatasetMetadata(LinkedDatasetMetadata $linkedDatasetMetadata)
+  {
+    $this->linkedDatasetMetadata = $linkedDatasetMetadata;
+  }
+  /**
+   * @return LinkedDatasetMetadata
+   */
+  public function getLinkedDatasetMetadata()
+  {
+    return $this->linkedDatasetMetadata;
+  }
+  /**
    * @param LinkedDatasetSource
    */
   public function setLinkedDatasetSource(LinkedDatasetSource $linkedDatasetSource)
@@ -388,6 +408,20 @@ class Dataset extends \Google\Collection
   public function getMaxTimeTravelHours()
   {
     return $this->maxTimeTravelHours;
+  }
+  /**
+   * @param bool
+   */
+  public function setSatisfiesPzi($satisfiesPzi)
+  {
+    $this->satisfiesPzi = $satisfiesPzi;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzi()
+  {
+    return $this->satisfiesPzi;
   }
   /**
    * @param bool

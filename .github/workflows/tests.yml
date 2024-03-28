@@ -23,7 +23,7 @@ jobs:
               with:
                 php-version: ${{ matrix.php }}
             - name: Install Dependencies
-              uses: nick-invision/retry@v2
+              uses: nick-invision/retry@v3
               with:
                 timeout_minutes: 10
                 max_attempts: 3
@@ -36,7 +36,7 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             - name: Set up Python
-              uses: actions/setup-python@v4
+              uses: actions/setup-python@v5
               with:
                 python-version: "3.10"
             - name: Install dependencies
